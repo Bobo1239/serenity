@@ -152,7 +152,7 @@ impl Connection {
         //
         // The returned packet will be a null-terminated string of the IP, and
         // the port encoded in LE in the last two bytes of the packet.
-        let udp = UdpSocket::bind("0.0.0.0:0")?;
+        let udp = UdpSocket::bind("[::]:0")?;
 
         {
             let mut bytes = [0; 70];
